@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online-Bookstore</title>
+</head>
+<body>
+    <h1>Online-Bookstore</h1>
+</body>
+<script>
+    function CreateAuthor (name, birthYear, nationality ) {
+        this.name = name;
+        this.birthYear = birthYear;
+        this.nationality = nationality;
+    } 
+
+    let author1 = new CreateAuthor("Dhanush",2003,"indian");
+    let author2 = new CreateAuthor("suresh",2003,"indian");
+    let author3 = new CreateAuthor("Ramesh",2003,"indian");
+
+    function NewBook (title , author , gener , price) {
+        this.title = title;
+        this.author = author;
+        this.gener = gener;
+        this.price = price;
+        this.bookInfo = function () {
+           console.log(`Book title is: ${this.title}`)
+           console.log(`Author name is: ${this.author.name}`)
+           console.log(`Book gener is : ${this.gener}`)
+           console.log(`Book price is: ${this.price}`)
+           console.log("<!@*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*@!>")
+        }
+    }
+
+
+
+    let book1 = new NewBook("The flame in heart",author1,"english",590);
+    let book2 = new NewBook("health and wellbeing",author2,"english",550);
+    let book3 = new NewBook("True self",author3,"english",600);
+
+    book1.bookInfo();
+    book2.bookInfo();
+    book3.bookInfo();
+</script>
+</html>
